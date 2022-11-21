@@ -1,0 +1,66 @@
+parameters:
+- name: scenarios
+  type: object
+  default: {}
+  
+
+stages:
+- ${{ each scenario in parameters.scenarios }}:
+  - stage: Deploy_Test_${{ replace( scenario, '-','_' )}}
+    displayName: Deploy_Test_${{ replace( scenario, '-','_' )}}
+    jobs:
+    - job: Test_${{ replace( scenario, '-','_' )}}
+      displayName: Test_${{ replace( scenario, '-','_' )}}
+      timeoutInMinutes: 90
+      steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '6.x'
+          checkLatest: true
+      - task: JavaToolInstaller@0
+        inputs:
+          versionSpec: '17'
+          jdkArchitectureOption: 'x64'
+          jdkSourceOption: 'AzureStorage'
+          azureResourceManagerEndpoint: 'bbg-middleware-staging'
+          azureStorageAccountName: 'samwautomation'
+          azureContainerName: 'openjdk'
+          azureCommonVirtualFile: 'openjdk-17.0.1_windows-x64_bin.zip'
+          jdkDestinationDirectory: 'C:/Windows/TEMP/chocolatey/openjdk/jdk17'
+          cleanDestinationDirectory: true
+    #- powershell: Install-Module -Name AzureRM -AllowClobber -Scope CurrentUser -Confirm:$False
+      - task: PowerShell@2
+        inputs:
+          filePath: 'scripts/dependencies.ps1'
+        displayName: 'Install Dependencies'  
+
+      - task: MavenAuthenticate@0
+        inputs:
+         artifactsFeeds: 'middleware-feed'
+      - task: Maven@3
+        inputs:
+          mavenPomFile: 'pom.xml'
+          goals: 'clean test'
+          options: '-Dcucumber.options=" --tags @${{ scenario }}"'
+          publishJUnitResults: true
+          testResultsFiles: '**/surefire-reports/TEST-*.xml'
+          javaHomeOption: 'JDKVersion'
+          mavenVersionOption: 'Path'
+          mavenDirectory: 'C:\apache-mavendir\Maven'
+          mavenSetM2Home: false
+          mavenAuthenticateFeed: false
+          effectivePomSkip: false
+          sonarQubeRunAnalysis: false
+        timeoutInMinutes: 160
+
+      - script: npm install -g allure-commandline --save-dev
+      - script: |
+          dir
+          allure generate --clean -o allure-reports/${{ scenario }}
+        workingDirectory: $(Build.SourcesDirectory)/target
+
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: 'target\allure-reports'
+          ArtifactName: 'drop'
+          publishLocation: 'Container'

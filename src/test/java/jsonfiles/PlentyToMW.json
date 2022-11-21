@@ -1,0 +1,281 @@
+{
+  "id": 572845,
+  "referrerId": 12,
+  "roundTotalsOnly": true,
+  "numberOfDecimals": 4,
+  "statusName": "Freigabe Versand",
+  "plentyId": 48250,
+  "typeId": 1,
+  "lockStatus": "unlocked",
+  "locationId": "1",
+  "createdAt": "2022-05-05T17:59:27+01:00",
+  "updatedAt": "2022-05-05T17:59:27+01:00",
+  "statusId": 5,
+  "ownerId": "1",
+  "relations": [
+    {
+      "orderId": 572845,
+      "referenceType": "warehouse",
+      "referenceId": 1,
+      "relation": "sender"
+    },
+    {
+      "orderId": 572845,
+      "referenceType": "contact",
+      "referenceId": 105,
+      "relation": "receiver"
+    }
+  ],
+  "properties": [
+    {
+      "orderId": 572845,
+      "typeId": 3,
+      "value": "17",
+      "createdAt": "2022-05-05T17:59:27+01:00",
+      "updatedAt": "2022-05-05T17:59:27+01:00"
+    },
+    {
+      "orderId": 572845,
+      "typeId": 6,
+      "value": "de",
+      "createdAt": "2022-05-05T17:59:27+01:00",
+      "updatedAt": "2022-05-05T17:59:27+01:00"
+    },
+    {
+      "orderId": 572845,
+      "typeId": 7,
+      "value": "14516752609",
+      "createdAt": "2022-05-05T17:59:27+01:00",
+      "updatedAt": "2022-05-05T17:59:27+01:00"
+    },
+    {
+      "orderId": 572845,
+      "typeId": 10,
+      "value": "3812b61b4ab57598dd0537b3c8db7030",
+      "createdAt": "2022-05-05T17:59:27+01:00",
+      "updatedAt": "2022-05-05T17:59:27+01:00"
+    },
+    {
+      "orderId": 572845,
+      "typeId": 66,
+      "value": "Rest",
+      "createdAt": "2022-05-05T17:59:27+01:00",
+      "updatedAt": "2022-05-05T17:59:27+01:00"
+    },
+    {
+      "orderId": 572845,
+      "typeId": 68,
+      "value": "rest",
+      "createdAt": "2022-05-05T17:59:27+01:00",
+      "updatedAt": "2022-05-05T17:59:27+01:00"
+    },
+    {
+      "orderId": 572845,
+      "typeId": 1,
+      "value": "1"
+    },
+    {
+      "orderId": 572845,
+      "typeId": 4,
+      "value": "unpaid"
+    },
+    {
+      "orderId": 572845,
+      "typeId": 2,
+      "value": "6"
+    },
+    {
+      "orderId": 572845,
+      "typeId": 65,
+      "value": "1"
+    }
+  ],
+  "dates": [
+    {
+      "orderId": 572845,
+      "typeId": 2,
+      "date": "2022-05-05T17:59:27+01:00"
+    },
+    {
+      "orderId": 572845,
+      "typeId": 4,
+      "date": "2022-05-05T17:59:27+01:00"
+    }
+  ],
+  "amounts": [
+    {
+      "id": 460709,
+      "orderId": 572845,
+      "isSystemCurrency": true,
+      "isNet": false,
+      "currency": "EUR",
+      "exchangeRate": 1,
+      "netTotal": 156.93,
+      "grossTotal": 189.89,
+      "vatTotal": 32.96,
+      "invoiceTotal": 189.89,
+      "paidAmount": 0,
+      "giftCardAmount": 0,
+      "createdAt": "2022-05-05T17:59:27+01:00",
+      "updatedAt": "2022-05-05T17:59:27+01:00",
+      "shippingCostsGross": 9.9,
+      "shippingCostsNet": 8.18,
+      "taxlessAmount": 0,
+      "prepaidAmount": 0,
+      "vats": [
+        {
+          "id": 461907,
+          "orderAmountId": 460709,
+          "countryVatId": 17,
+          "vatField": 0,
+          "vatRate": 21,
+          "value": 32.96,
+          "createdAt": "2022-05-05T17:59:27+01:00",
+          "updatedAt": "2022-05-05T17:59:27+01:00",
+          "netTotal": 156.93,
+          "grossTotal": 189.89
+        }
+      ]
+    }
+  ],
+  "orderReferences": [],
+  "orderItems": [
+    {
+      "id": 886276,
+      "orderId": 572845,
+      "typeId": 6,
+      "referrerId": 2.05,
+      "itemVariationId": 0,
+      "quantity": 2,
+      "orderItemName": "Versandkosten",
+      "attributeValues": "",
+      "shippingProfileId": 0,
+      "countryVatId": 17,
+      "vatField": 0,
+      "vatRate": 21,
+      "position": "0",
+      "createdAt": "2022-05-05T17:59:27+01:00",
+      "updatedAt": "2022-05-05T17:59:27+01:00",
+      "warehouseId": null,
+      "orderProperties": [],
+      "properties": [],
+      "dates": [],
+      "amounts": [
+        {
+          "id": 911408,
+          "orderItemId": 886276,
+          "isSystemCurrency": true,
+          "currency": "EUR",
+          "exchangeRate": 1,
+          "purchasePrice": 0,
+          "priceOriginalGross": 9.9,
+          "priceOriginalNet": 8.1818,
+          "priceGross": 9.9,
+          "priceNet": 8.1818,
+          "surcharge": 0,
+          "discount": 0,
+          "isPercentage": true,
+          "createdAt": "2022-05-05T17:59:27+01:00",
+          "updatedAt": "2022-05-05T17:59:27+01:00"
+        }
+      ],
+      "references": []
+    },
+    {
+      "id": 886277,
+      "orderId": 572845,
+      "typeId": 1,
+      "referrerId": 2.05,
+      "itemVariationId": 1577,
+      "quantity": 2,
+      "orderItemName": "Klarstein MKS-13 Minibar Glastür schwarz",
+      "attributeValues": null,
+      "shippingProfileId": 0,
+      "countryVatId": 17,
+      "vatField": 0,
+      "vatRate": 21,
+      "position": "0",
+      "createdAt": "2022-05-05T17:59:27+01:00",
+      "updatedAt": "2022-05-05T17:59:27+01:00",
+      "warehouseId": 1,
+      "orderProperties": [],
+      "properties": [
+        {
+          "id": 3411685,
+          "orderItemId": 886277,
+          "typeId": 1,
+          "value": "1",
+          "createdAt": "2022-05-05T17:59:27+01:00",
+          "updatedAt": "2022-05-05T17:59:27+01:00"
+        },
+        {
+          "id": 3411682,
+          "orderItemId": 886277,
+          "typeId": 11,
+          "value": "10500",
+          "createdAt": "2022-05-05T17:59:27+01:00",
+          "updatedAt": "2022-05-05T17:59:27+01:00"
+        },
+        {
+          "id": 3411683,
+          "orderItemId": 886277,
+          "typeId": 17,
+          "value": "84341229",
+          "createdAt": "2022-05-05T17:59:27+01:00",
+          "updatedAt": "2022-05-05T17:59:27+01:00"
+        },
+        {
+          "id": 3411686,
+          "orderItemId": 886277,
+          "typeId": 21,
+          "value": "1",
+          "createdAt": "2022-05-05T17:59:27+01:00",
+          "updatedAt": "2022-05-05T17:59:27+01:00"
+        },
+        {
+          "id": 3411684,
+          "orderItemId": 886277,
+          "typeId": 29,
+          "value": "MKS-13 Minibar 32 Liter Klasse A schwarz Glas 0dB",
+          "createdAt": "2022-05-05T17:59:27+01:00",
+          "updatedAt": "2022-05-05T17:59:27+01:00"
+        }
+      ],
+      "dates": [],
+      "amounts": [
+        {
+          "id": 911409,
+          "orderItemId": 886277,
+          "isSystemCurrency": true,
+          "currency": "EUR",
+          "exchangeRate": 1,
+          "purchasePrice": 0,
+          "priceOriginalGross": 179.99,
+          "priceOriginalNet": 148.7521,
+          "priceGross": 179.99,
+          "priceNet": 148.7521,
+          "surcharge": 0,
+          "discount": 0,
+          "isPercentage": true,
+          "createdAt": "2022-05-05T17:59:27+01:00",
+          "updatedAt": "2022-05-05T17:59:27+01:00"
+        }
+      ],
+      "references": []
+    }
+  ],
+  "addressRelations": [
+    {
+      "id": 890956,
+      "orderId": 572845,
+      "typeId": 1,
+      "addressId": 7
+    },
+    {
+      "id": 890957,
+      "orderId": 572845,
+      "typeId": 2,
+      "addressId": 7
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+trigger:
+- main
+
+pool: 
+  name: Self-hosted Berlin
+  demands: maven
+
+stages:
+- template: pipeline.yml
+  parameters:
+    scenarios:
+    - scenario1_stage
+    - scenario2_stage
+    - scenario3_stage
+    - scenario4_stage
+    - scenario6_stage
+    - scenario7_stage
+    - scenario8_stage
